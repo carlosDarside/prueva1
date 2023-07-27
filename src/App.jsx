@@ -2,28 +2,29 @@ import React from "react";
 import logo from "./logo.PNG";
 import logotipo from "./logotipo.png";
 import "./App.css";
-import { Grid } from "@mui/material";
 
 function App() {
   return (
-    <Grid container className="main-container">
-      <Grid item xs={12} className="absolute-container">
-        <Grid container direction="column" justifyContent="center" alignItems="center" style={{ height: "100%" }} >
+    <div className="main-container">
+      <div className="absolute-container">
+        <div>
           <img src={logo} className="new-logo-img" alt="logo" />
           <img src={logotipo} className="new-image" alt="Nueva imagen" />
-        </Grid>
-      </Grid>
-      <div className="center-container">
-        <Grid item xs={3} className="center-content">
-          <Grid container direction="column">
-            <p>Bienvenido a doctorus</p>
-          </Grid>
-        </Grid>
+        </div>
       </div>
-      <Grid item xs={12} className="absolute-container-bottom">
+      <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}>
+        <div className="center-container">
+          <div className="center-content">
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <p>Bienvenido a doctorus</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute-container-bottom">
         <p>Hola, prueba sobre contenedor inferior.</p>
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   );
 }
 
